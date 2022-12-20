@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WzR-6y-AlF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eoz-Bm-weN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="PodcastApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,19 +20,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-72-pzE">
-                                <rect key="frame" x="40" y="99" width="129.33333333333334" height="43"/>
+                                <rect key="frame" x="40" y="143" width="129.33333333333334" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ByY-7C-7ma">
-                                <rect key="frame" x="40" y="212" width="313" height="88"/>
+                                <rect key="frame" x="40" y="256" width="313" height="88"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALD-xS-Lhd">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="36"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_email" translatesAutoresizingMaskIntoConstraints="NO" id="oa2-tI-1qf">
-                                                <rect key="frame" x="0.0" y="8.6666666666666572" width="20" height="18"/>
+                                                <rect key="frame" x="0.0" y="8.6666666666666856" width="20" height="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="gzT-OU-PDC"/>
@@ -105,6 +105,9 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="icon_eye"/>
+                                                <connections>
+                                                    <action selector="eyeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oT6-jj-UUr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,7 +130,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xn-sz-D9t">
-                                <rect key="frame" x="233" y="320" width="120" height="29"/>
+                                <rect key="frame" x="233" y="364" width="120" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -144,6 +147,9 @@
                                 <state key="normal" title="SIGN IN">
                                     <color key="titleColor" red="0.12549019607843137" green="0.14117647058823529" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="62J-ou-Akv"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="65E-8f-pjU">
                                 <rect key="frame" x="85.333333333333329" y="769" width="222.33333333333337" height="29"/>
@@ -160,6 +166,9 @@
                                         <color key="tintColor" red="0.79607843140000001" green="0.98431372549999996" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vQY-Xz-guh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -235,15 +244,23 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ByY-7C-7ma" secondAttribute="trailing" constant="40" id="wXN-iY-zeW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UB1-UT-QoX"/>
+                    <connections>
+                        <outlet property="emailTextFiel" destination="9ML-3k-3hh" id="hW5-yq-Aqj"/>
+                        <outlet property="eyeButton" destination="RhB-zB-d4j" id="Tt8-sY-YsN"/>
+                        <outlet property="passwordTextField" destination="TNU-g3-ElB" id="cE5-QC-K9H"/>
+                        <outlet property="signInButton" destination="mko-d9-yNH" id="bjf-Tg-Ule"/>
+                        <outlet property="titleLabel" destination="AEg-72-pzE" id="QBF-Lf-j9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="14"/>
+            <point key="canvasLocation" x="515.26717557251902" y="-17.605633802816904"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="YNP-h2-sPv">
             <objects>
-                <viewController id="WzR-6y-AlF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" modalPresentationStyle="fullScreen" id="WzR-6y-AlF" customClass="RegisterViewController" customModule="PodcastApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1xo-vH-DUE">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,11 +430,14 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkh-UE-ft7">
-                                <rect key="frame" x="163.66666666666666" y="482" width="66" height="32"/>
+                                <rect key="frame" x="166.66666666666666" y="482" width="60" height="32"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="SIGN UP"/>
+                                <state key="normal" title="SIGN IN"/>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="WzR-6y-AlF" eventType="touchUpInside" id="3qn-zd-mum"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fnd-E9-LpT"/>
@@ -439,10 +459,29 @@
                             <constraint firstItem="KNR-Vf-Byu" firstAttribute="leading" secondItem="fnd-E9-LpT" secondAttribute="leading" constant="40" id="tUa-1f-yDA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="d6D-V4-1AM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3tD-uS-hZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="59"/>
+            <point key="canvasLocation" x="1553.4351145038167" y="-16.197183098591552"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zdC-01-dRd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eoz-Bm-weN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAA-jB-1Iu">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="JKH-5h-Xlk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3I-YA-CDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-411.4503816793893" y="-17.605633802816904"/>
         </scene>
     </scenes>
     <resources>
