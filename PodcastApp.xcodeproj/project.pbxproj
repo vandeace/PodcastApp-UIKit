@@ -14,6 +14,8 @@
 		DC2A1D1C294CAC1200496E3C /* PodcastApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC2A1D1A294CAC1200496E3C /* PodcastApp.xcdatamodeld */; };
 		DC2A1D1E294CAC1400496E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC2A1D1D294CAC1400496E3C /* Assets.xcassets */; };
 		DC2A1D21294CAC1400496E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC2A1D1F294CAC1400496E3C /* LaunchScreen.storyboard */; };
+		DC8D00532950CCA200101882 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8D00522950CCA200101882 /* Auth.storyboard */; };
+		DCBBD7DD294CAE97006B435D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBBD7DC294CAE97006B435D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DC2A1D1D294CAC1400496E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC2A1D20294CAC1400496E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC2A1D22294CAC1400496E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC8D00522950CCA200101882 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		DCBBD7DC294CAE97006B435D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,42 @@
 		DC2A1D10294CAC1200496E3C /* PodcastApp */ = {
 			isa = PBXGroup;
 			children = (
+				DC2A1D28294CAC2100496E3C /* Modules */,
 				DC2A1D11294CAC1200496E3C /* AppDelegate.swift */,
 				DC2A1D13294CAC1200496E3C /* SceneDelegate.swift */,
-				DC2A1D15294CAC1200496E3C /* ViewController.swift */,
-				DC2A1D17294CAC1200496E3C /* Main.storyboard */,
 				DC2A1D1D294CAC1400496E3C /* Assets.xcassets */,
 				DC2A1D1F294CAC1400496E3C /* LaunchScreen.storyboard */,
 				DC2A1D22294CAC1400496E3C /* Info.plist */,
 				DC2A1D1A294CAC1200496E3C /* PodcastApp.xcdatamodeld */,
 			);
 			path = PodcastApp;
+			sourceTree = "<group>";
+		};
+		DC2A1D28294CAC2100496E3C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DCBBD7DE294CAEFF006B435D /* Main */,
+				DC2A1D29294CAC2C00496E3C /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DC2A1D29294CAC2C00496E3C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DCBBD7DC294CAE97006B435D /* LoginViewController.swift */,
+				DC8D00522950CCA200101882 /* Auth.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DCBBD7DE294CAEFF006B435D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DC2A1D15294CAC1200496E3C /* ViewController.swift */,
+				DC2A1D17294CAC1200496E3C /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC8D00532950CCA200101882 /* Auth.storyboard in Resources */,
 				DC2A1D21294CAC1400496E3C /* LaunchScreen.storyboard in Resources */,
 				DC2A1D1E294CAC1400496E3C /* Assets.xcassets in Resources */,
 				DC2A1D19294CAC1200496E3C /* Main.storyboard in Resources */,
@@ -144,6 +175,7 @@
 				DC2A1D16294CAC1200496E3C /* ViewController.swift in Sources */,
 				DC2A1D12294CAC1200496E3C /* AppDelegate.swift in Sources */,
 				DC2A1D1C294CAC1200496E3C /* PodcastApp.xcdatamodeld in Sources */,
+				DCBBD7DD294CAE97006B435D /* LoginViewController.swift in Sources */,
 				DC2A1D14294CAC1200496E3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
